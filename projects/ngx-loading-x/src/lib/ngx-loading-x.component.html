@@ -1,0 +1,20 @@
+<!-- Foreground container {{{ -->
+<div class="ngx-overlay" [class.ngx-position-absolute]="loaderId !== defaultConfig.masterLoaderId"
+  [style.background-color]="overlayColor" [style.border-radius]="overlayBorderRadius"
+  [class.loading-foreground]="showForeground" [class.foreground-closing]="foregroundClosing"
+  [class.fast-closing]="foregroundClosing && fastFadeOut">
+  <!-- Logo {{{ -->
+  <img *ngIf="logoUrl" class="ngx-loading-logo" [ngClass]="logoPosition" [src]="trustedLogoUrl"
+    [style.width.px]="logoSize" [style.height.px]="logoSize" [style.top]="logoTop" />
+  <!-- Logo }}} -->
+
+  <!-- Foreground spinner {{{ -->
+  <div class="ngx-foreground-spinner" [ngClass]="fgsPosition" [style.color]="fgsColor" [style.width.px]="fgsSize"
+    [style.height.px]="fgsSize" [style.top]="spinnerTop">
+    <div *ngIf="!fgsTemplate; else foregroundTemplate" [class]="fgSpinnerClass">
+      <div *ngFor="let div of fgDivs"></div>
+    </div>
+  </div>
+  <!-- Foreground spinner }}} -->
+</div>
+<!-- Foreground container }}} -->
