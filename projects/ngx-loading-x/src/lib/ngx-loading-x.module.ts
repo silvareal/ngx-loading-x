@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { NgxLoadingXComponent } from './ngx-loading-x.component';
+import { NgxLoadingXConfig } from './utils/NgxLoadingXConfig.interface';
+import { NGX_LOADING_X_TOKEN } from './ngx-loading-x-config.token';
 
 
 
@@ -9,4 +11,17 @@ import { NgxLoadingXComponent } from './ngx-loading-x.component';
   ],
   exports: [NgxLoadingXComponent]
 })
-export class NgxLoadingXModule { }
+export class NgxLoadingXModule { 
+  
+  static forRoot(ngxLoaderXConfig: NgxLoadingXConfig): ModuleWithProviders<NgxLoadingXModule> {
+  return {
+    ngModule: NgxLoadingXModule,
+    providers: [
+      {
+        provide: NGX_LOADING_X_TOKEN,
+        useValue: ngxLoaderXConfig
+      }
+    ]
+  };
+}
+}
