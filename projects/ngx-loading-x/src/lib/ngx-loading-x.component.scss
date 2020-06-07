@@ -1,9 +1,3 @@
-$logoSize: 120px;
-$overlayColor: rgba(40, 40, 40, 0.8);
-$bgColor: #00acc1;
-$spinnerColor: #00acc1;
-$spinnerSize: 60px;
-
 
 .ngx-overlay {
   position: fixed;
@@ -12,34 +6,25 @@ $spinnerSize: 60px;
   width: 100%;
   height: 100%;
   z-index: 99998 !important;
-  background-color: $overlayColor;
   cursor: progress;
-  transition: 0.4s ease-out;
+  transition: 5s ease-out;
 
 
   &>.ngx-foreground-spinner {
     position: fixed;
-    width: $spinnerSize;
-    height: $spinnerSize;
     margin: 0;
-    color: $spinnerColor;
   }
 
   &>.ngx-loading-x-logo {
     position: fixed;
     margin: 0;
-    width: $logoSize;
-    height: $logoSize;
   }
 }
 
 .ngx-background-spinner {
   position: fixed;
   z-index: 99997 !important;
-  width: $spinnerSize;
-  height: $spinnerSize;
   margin: 0;
-  color: $spinnerColor;
   opacity: 0.6;
 }
 
