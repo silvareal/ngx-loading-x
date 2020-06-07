@@ -1,3 +1,4 @@
+import { POSITION } from './utils/enums';
 import { Component, OnInit, Input } from '@angular/core';
 import { PositionType, SpinnerType } from './utils/types';
 import { NgxLoadingXConfig } from './utils/NgxLoadingXConfig.interface';
@@ -32,6 +33,8 @@ export class NgxLoadingXComponent implements OnInit {
   spinnerClass: string;
   trustedLogoUrl: SafeResourceUrl;
 
+  spinnerTop;
+  logoTop;
   
   constructor(private domSanitizer: DomSanitizer,) {
     this.defaultConfig = DEFAULT_CONFIG;
@@ -49,12 +52,24 @@ export class NgxLoadingXComponent implements OnInit {
    }
 
 
+
   private initializeSpinners(): void {
     this.spinnerDivs = Array(SPINNER_CONFIG[this.spinnerType].divs).fill(1);
     this.spinnerClass = SPINNER_CONFIG[this.spinnerType].class;
   }
+
+  private determineCenterPositions(): void {
+    if (this.bgLogoUrlPosition === POSITION.centerCenter && this.spinnerPosition === POSITION.centerCenter) {
+      this.spinnerTop = this.domSanitizer.bypassSecurityTrustStyle(`calc(50% + 88px)`);
+      this.logoTop = this.domSanitizer.bypassSecurityTrustStyle(`calc(50% - 88px)`);
+    }
+  }
+
   ngOnInit(): void {
     this.trustedLogoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.bgLogoUrl);
-    this.initializeSpinners()
+    this.initializeSpinners();
+    this.determineCenterPositions();
   }
+
+
 }
