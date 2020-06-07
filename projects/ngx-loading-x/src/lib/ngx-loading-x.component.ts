@@ -2,8 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PositionType, SpinnerType } from './utils/types';
 import { NgxLoadingXConfig } from './utils/NgxLoadingXConfig.interface';
 import { ChangeDetectionStrategy } from '@angular/core';
-import { DEFAULT_CONFIG } from './utils/NgxLoadingXConfig.constants';
-import { SPINNER_CONFIG } from './utils/enums';
+import { DEFAULT_CONFIG, SPINNER_CONFIG } from './utils/NgxLoadingXConfig.constants';
 @Component({
   selector: 'ngx-loading-x',
   templateUrl: './ngx-loading-x.component.html',
@@ -12,6 +11,7 @@ import { SPINNER_CONFIG } from './utils/enums';
 })
 
 export class NgxLoadingXComponent implements OnInit {
+
   @Input() show: Boolean;
   @Input() bgBlur: Number;
   @Input() bgColor: String;
@@ -22,6 +22,7 @@ export class NgxLoadingXComponent implements OnInit {
   @Input() spinnerType: SpinnerType;
   @Input() spinnerSize: Number;
   @Input() spinnerColor: String;
+  @Input() spinnerPosition: PositionType;
   
 
   defaultConfig: NgxLoadingXConfig;
@@ -41,9 +42,11 @@ export class NgxLoadingXComponent implements OnInit {
     this.spinnerType = DEFAULT_CONFIG.spinnerType;
     this.spinnerSize = DEFAULT_CONFIG.spinnerSize;
     this.spinnerColor = DEFAULT_CONFIG.spinnerColor;
+    this.spinnerPosition = DEFAULT_CONFIG.spinnerPosition;
    }
 
   ngOnInit(): void {
+    this.initializeSpinners()
   }
 
   private initializeSpinners(): void {

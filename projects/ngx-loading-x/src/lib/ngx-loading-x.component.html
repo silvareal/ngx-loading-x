@@ -1,15 +1,16 @@
 <!-- container {{{ -->
 <div *ngIf="show">
+    <h1>Testing</h1>
     <div class="ngx-overlay" [style.background-color]="overlayColor" [style.border-radius]="overlayBorderRadius"
     [class.loading-foreground]="showForeground" [class.foreground-closing]="foregroundClosing"
 >
     <!-- Logo -->
-    <img *ngIf="logoUrl" class="ngx-loading-logo" [ngClass]="logoPosition" [src]="trustedLogoUrl"
+    <img *ngIf="logoUrl" class="ngx-loading-logo" [ngClass]="bgLogoUrlPosition" [src]="trustedLogoUrl"
         [style.width.px]="logoSize" [style.height.px]="logoSize" [style.top]="logoTop" />
     <!-- Logo -->
 
     <!-- spinner -->
-    <div class="ngx-foreground-spinner" [style.color]="spinnerColor"
+    <div class="ngx-foreground-spinner" [ngClass]="spinnerPosition" [style.color]="spinnerColor"
       [style.width.px]="spinnerSize"
         [style.height.px]="spinnerSize" [style.top]="spinnerTop">
         <div [class]="spinnerClass">

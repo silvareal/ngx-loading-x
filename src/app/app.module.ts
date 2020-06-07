@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NgxLoadingXModule } from 'projects/ngx-loading-x/src/lib/ngx-loading-x.module';
+import { NgxLoadingXBlurDirective } from './ngx-loading-xblur.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgxLoadingXBlurDirective
   ],
   imports: [
     BrowserModule,

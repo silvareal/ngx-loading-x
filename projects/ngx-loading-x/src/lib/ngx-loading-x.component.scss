@@ -15,13 +15,6 @@ $spinnerSize: 60px;
   z-index: 99998 !important;
   background-color: $overlayColor;
   cursor: progress;
-  display: none;
-
-  &.loading-foreground,
-  &.foreground-closing {
-    display: block;
-  }
-
 
 
   &>.ngx-foreground-spinner {
@@ -48,7 +41,6 @@ $spinnerSize: 60px;
   margin: 0;
   color: $spinnerColor;
   opacity: 0.6;
-  display: none;
 
   &.loading-background,
   &.background-closing {

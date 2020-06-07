@@ -12,4 +12,17 @@ export const DEFAULT_CONFIG: NgxLoadingXConfig = {
     spinnerType: SPINNER.threeStrings,
     spinnerSize: 150,
     spinnerColor: 'goldenrod',
+    spinnerPosition: POSITION.centerCenter,
 }
+
+// Spinner Configuration
+export const SPINNER_CONFIG = {
+    'three-strings': {
+        divs: 3,
+        class: 'sk-three-strings'
+    },
+    'wandering-cubes': {
+        divs: 2,
+        class: 'sk-wandering-cubes'
+    }
+};

@@ -11,4 +11,5 @@ export interface NgxLoadingXConfig {
     spinnerType: SpinnerType;
     spinnerSize: Number;
     spinnerColor: String;
+    spinnerPosition: PositionType;
 }

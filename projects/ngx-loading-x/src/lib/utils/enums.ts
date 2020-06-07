@@ -1,14 +1,3 @@
-// Spinner Configuration
-export const SPINNER_CONFIG = {
-    'three-strings': {
-        divs: 3,
-        class: 'sk-three-strings'
-    },
-    'wandering-cubes': {
-        divs: 2,
-        class: 'sk-wandering-cubes'
-    }
-};
 
 // SPinner Types
 export enum SPINNER {
