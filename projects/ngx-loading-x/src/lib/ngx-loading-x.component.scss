@@ -1,7 +1,6 @@
 $logoSize: 120px;
 $overlayColor: rgba(40, 40, 40, 0.8);
-$pbColor: #00acc1;
-$pbThickness: 3px;
+$bgColor: #00acc1;
 $spinnerColor: #00acc1;
 $spinnerSize: 60px;
 
@@ -15,6 +14,7 @@ $spinnerSize: 60px;
   z-index: 99998 !important;
   background-color: $overlayColor;
   cursor: progress;
+  transition: 0.4s ease-out;
 
 
   &>.ngx-foreground-spinner {
@@ -41,28 +41,13 @@ $spinnerSize: 60px;
   margin: 0;
   color: $spinnerColor;
   opacity: 0.6;
-
-  &.loading-background,
-  &.background-closing {
-    display: block;
-  }
-
-  &.background-closing {
-    opacity: 0 !important;
-    transition: opacity 0.7s ease-out;
-  }
-
-  &.fast-closing {
-    transition: opacity 0.4s ease-out !important;
-  }
 }
 
 .ngx-position-absolute {
   position: absolute !important;
 
   &>.ngx-foreground-spinner,
-  &>.ngx-loading-x-logo,
-  &>.ngx-loading-x-text {
+  &>.ngx-loading-x-logo {
     position: absolute !important;
   }
 
@@ -74,9 +59,6 @@ $spinnerSize: 60px;
     z-index: 99994 !important;
   }
 
-  & .sk-square-jelly-box>div:nth-child(1) {
-    z-index: 99994 !important;
-  }
 }
 
 
