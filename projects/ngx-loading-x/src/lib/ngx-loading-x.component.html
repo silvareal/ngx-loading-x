@@ -1,10 +1,9 @@
 <!-- container {{{ -->
 <div *ngIf="show">
-  <div class="ngx-overlay" [style.background-color]="overlayColor" [style.border-radius]="overlayBorderRadius"
-    [class.loading-foreground]="showForeground" [class.foreground-closing]="foregroundClosing">
+  <div class="ngx-overlay" [style.background-color]="bgColor" [style.opacity]="bgOpacity">
     <!-- Logo -->
-    <img *ngIf="logoUrl" class="ngx-loading-logo" [ngClass]="bgLogoUrlPosition" [src]="trustedLogoUrl"
-      [style.width.px]="logoSize" [style.height.px]="logoSize" [style.top]="logoTop" />
+    <img *ngIf="bgLogoUrl" class="ngx-loading-x-logo" [ngClass]="bgLogoUrlPosition" [src]="trustedLogoUrl"
+      [style.width.px]="bgLogoUrlSize" [style.height.px]="bgLogoUrlSize" [style.top]="10" />
     <!-- Logo -->
 
     <!-- spinner -->
