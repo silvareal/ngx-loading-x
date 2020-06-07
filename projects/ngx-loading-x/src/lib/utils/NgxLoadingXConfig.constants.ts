@@ -7,7 +7,7 @@ export const DEFAULT_CONFIG: NgxLoadingXConfig = {
     bgColor: 'rgba(40, 40, 40, 0.5)',
     bgOpacity: 5,
     bgLogoUrl: '',
-    bgLogoUrlPosition: POSITION.centerCenter,
+    bgLogoUrlPosition: POSITION.bottomRight,
     bgLogoUrlSize: 100,
     spinnerType: SPINNER.threeStrings,
     spinnerSize: 150,
