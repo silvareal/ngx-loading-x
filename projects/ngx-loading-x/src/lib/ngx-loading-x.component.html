@@ -1,23 +1,22 @@
 <!-- container {{{ -->
 <div *ngIf="show">
-    <div class="ngx-overlay" [style.background-color]="overlayColor" [style.border-radius]="overlayBorderRadius"
-    [class.loading-foreground]="showForeground" [class.foreground-closing]="foregroundClosing"
->
+  <div class="ngx-overlay" [style.background-color]="overlayColor" [style.border-radius]="overlayBorderRadius"
+    [class.loading-foreground]="showForeground" [class.foreground-closing]="foregroundClosing">
     <!-- Logo -->
     <img *ngIf="logoUrl" class="ngx-loading-logo" [ngClass]="bgLogoUrlPosition" [src]="trustedLogoUrl"
-        [style.width.px]="logoSize" [style.height.px]="logoSize" [style.top]="logoTop" />
+      [style.width.px]="logoSize" [style.height.px]="logoSize" [style.top]="logoTop" />
     <!-- Logo -->
 
     <!-- spinner -->
     <div class="ngx-foreground-spinner" [ngClass]="spinnerPosition" [style.color]="spinnerColor"
-      [style.width.px]="spinnerSize"
-        [style.height.px]="spinnerSize" [style.top]="spinnerTop">
-        <div [class]="spinnerClass">
+      [style.width.px]="spinnerSize" [style.height.px]="spinnerSize" [style.top]="spinnerTop">
+      <div [class]="spinnerClass">
         <div *ngFor="let div of spinnerDivs"></div>
-        </div>
+      </div>
     </div>
-    <!-- End Foreground -->
-    </div>
+  </div>
+  <!-- End Spinner -->
+
 
 </div>
 

@@ -19,9 +19,10 @@ export class NgxLoadingXBlurDirective implements OnChanges {
       const blurValue = `blur(${this.blur}px)`;
       this.renderer.setStyle(this.elementRef.nativeElement, '-webkit-filter', blurValue);
       this.renderer.setStyle(this.elementRef.nativeElement, 'filter', blurValue);
+    } else {
+      const blurValue = `none`;
+      this.renderer.setStyle(this.elementRef.nativeElement, '-webkit-filter', blurValue);
+      this.renderer.setStyle(this.elementRef.nativeElement, 'filter', blurValue);
     }
-    const blurValue = `none`;
-    this.renderer.setStyle(this.elementRef.nativeElement, '-webkit-filter', blurValue);
-    this.renderer.setStyle(this.elementRef.nativeElement, 'filter', blurValue);
   }
 }
