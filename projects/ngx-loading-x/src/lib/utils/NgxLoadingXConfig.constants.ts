@@ -4,14 +4,14 @@ import { POSITION, SPINNER } from './enums';
 export const DEFAULT_CONFIG: NgxLoadingXConfig = {
     show: false,
     bgBlur: 5,
-    bgColor: 'goldenrod',
+    bgColor: 'rgba(40, 40, 40, 0.5)',
     bgOpacity: 5,
     bgLogoUrl: '',
-    bgLogoUrlPosition: POSITION.bottomRight,
+    bgLogoUrlPosition: POSITION.centerCenter,
     bgLogoUrlSize: 100,
     spinnerType: SPINNER.threeStrings,
     spinnerSize: 150,
-    spinnerColor: 'goldenrod',
+    spinnerColor: '#dd1b16',
     spinnerPosition: POSITION.centerCenter,
 }
 

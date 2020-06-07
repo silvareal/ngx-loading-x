@@ -14,6 +14,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.load = true;
 
-    setTimeout(() => this.load = false, 5000 )
+    // setTimeout(() => this.load = false, 5000 )
   }
 }

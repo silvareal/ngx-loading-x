@@ -3,6 +3,7 @@ import { PositionType, SpinnerType } from './utils/types';
 import { NgxLoadingXConfig } from './utils/NgxLoadingXConfig.interface';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { DEFAULT_CONFIG, SPINNER_CONFIG } from './utils/NgxLoadingXConfig.constants';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'ngx-loading-x',
   templateUrl: './ngx-loading-x.component.html',
@@ -12,25 +13,27 @@ import { DEFAULT_CONFIG, SPINNER_CONFIG } from './utils/NgxLoadingXConfig.consta
 
 export class NgxLoadingXComponent implements OnInit {
 
-  @Input() show: Boolean;
-  @Input() bgBlur: Number;
-  @Input() bgColor: String;
-  @Input() bgOpacity: Number;
-  @Input() bgLogoUrl: String;
+  @Input() show: boolean;
+  @Input() bgBlur: number;
+  @Input() bgColor: string;
+  @Input() bgOpacity: number;
+  @Input() bgLogoUrl: string;
   @Input() bgLogoUrlPosition: PositionType;
-  @Input() bgLogoUrlSize: Number;
+  @Input() bgLogoUrlSize: number;
   @Input() spinnerType: SpinnerType;
-  @Input() spinnerSize: Number;
-  @Input() spinnerColor: String;
+  @Input() spinnerSize: number;
+  @Input() spinnerColor: string;
   @Input() spinnerPosition: PositionType;
   
 
   defaultConfig: NgxLoadingXConfig;
 
   spinnerDivs: Number[];
-  spinnerClass: String;
+  spinnerClass: string;
+  trustedLogoUrl: SafeResourceUrl;
 
-  constructor() {
+  
+  constructor(private domSanitizer: DomSanitizer,) {
     this.defaultConfig = DEFAULT_CONFIG;
     this.show = DEFAULT_CONFIG.show;
     this.bgBlur = DEFAULT_CONFIG.bgBlur;
@@ -45,13 +48,13 @@ export class NgxLoadingXComponent implements OnInit {
     this.spinnerPosition = DEFAULT_CONFIG.spinnerPosition;
    }
 
-  ngOnInit(): void {
-    this.initializeSpinners()
-  }
 
   private initializeSpinners(): void {
     this.spinnerDivs = Array(SPINNER_CONFIG[this.spinnerType].divs).fill(1);
     this.spinnerClass = SPINNER_CONFIG[this.spinnerType].class;
   }
-
+  ngOnInit(): void {
+    this.trustedLogoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.bgLogoUrl);
+    this.initializeSpinners()
+  }
 }
