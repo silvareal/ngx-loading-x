@@ -2,6 +2,9 @@
 
 <div class="container-fluid">
   <div class="p-5 mt-5 shadow rounded bg-light" style="max-width: 500px; margin: 0 auto;">
+    <div *ngIf="register" class="alert alert-success" role="alert">
+      Dummy account sccessfully created 😀
+    </div>
     <form class="mt-4" [formGroup]="ngxLoadingXForm" (ngSubmit)="loginForm()">
 
       <div class="form-group">
@@ -24,7 +27,7 @@
       </div>
 
       <input [disabled]="!ngxLoadingXForm.valid" class="btn btn-success w-100 mt-4" type="submit"
-        value="Generate Certificate">
+        value="Register">
     </form>
   </div>
 </div>

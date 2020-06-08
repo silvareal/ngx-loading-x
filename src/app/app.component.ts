@@ -7,10 +7,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   public load = false;
-  title = 'ng-loading-library';
-  ngxLoadingXForm: FormGroup;
 
-  constructor(private fb: FormBuilder,) {}
+  ngxLoadingXForm: FormGroup;
+  register = false;
+
+  constructor(private fb: FormBuilder, ) { }
 
   ngOnInit() {
     this.ngxLoadingXForm = this.fb.group({
@@ -21,6 +22,10 @@ export class AppComponent implements OnInit {
 
   loginForm() {
     this.load = true;
-    setTimeout(() => this.load = false, 5000 )
+
+    setTimeout(() => {
+      this.load = false,
+        this.register = true;
+    }, 5000)
   }
 }
