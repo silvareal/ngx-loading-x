@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {  ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NgxLoadingXModule } from 'projects/ngx-loading-x/src/lib/ngx-loading-x.module';
 import { NgxLoadingXBlurDirective } from './ngx-loading-xblur.directive';
@@ -10,15 +10,15 @@ import { NgxLoadingXConfig } from 'projects/ngx-loading-x/src/lib/utils/NgxLoadi
 
 const ngxLoadingXConfig: NgxLoadingXConfig = {
   show: false,
-  bgBlur: 0,
+  bgBlur: 2,
   bgColor: 'rgba(40, 40, 40, 0.5)',
   bgOpacity: 5,
-  bgLogoUrl: '',
+  bgLogoUrl: './assets/img/logo.png',
   bgLogoUrlPosition: POSITION.topLeft,
   bgLogoUrlSize: 100,
   spinnerType: SPINNER.wanderingCubes,
   spinnerSize: 120,
-  spinnerColor: 'yellow',
+  spinnerColor: '#dd0031',
   spinnerPosition: POSITION.centerCenter,
 }
 @NgModule({
@@ -28,6 +28,7 @@ const ngxLoadingXConfig: NgxLoadingXConfig = {
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     NgxLoadingXModule.forRoot(ngxLoadingXConfig)
   ],
   providers: [],
