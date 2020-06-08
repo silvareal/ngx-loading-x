@@ -3,8 +3,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PositionType, SpinnerType } from './utils/types';
 import { NgxLoadingXConfig } from './utils/NgxLoadingXConfig.interface';
 import { ChangeDetectionStrategy } from '@angular/core';
-import { DEFAULT_CONFIG, SPINNER_CONFIG } from './utils/NgxLoadingXConfig.constants';
+import { SPINNER_CONFIG } from './utils/NgxLoadingXConfig.constants';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { NgxLoadingXService } from './ngx-loading-x.service';
 @Component({
   selector: 'ngx-loading-x',
   templateUrl: './ngx-loading-x.component.html',
@@ -25,7 +26,7 @@ export class NgxLoadingXComponent implements OnInit {
   @Input() spinnerSize: number;
   @Input() spinnerColor: string;
   @Input() spinnerPosition: PositionType;
-  
+
 
   defaultConfig: NgxLoadingXConfig;
 
@@ -35,21 +36,21 @@ export class NgxLoadingXComponent implements OnInit {
 
   spinnerTop;
   logoTop;
-  
-  constructor(private domSanitizer: DomSanitizer,) {
-    this.defaultConfig = DEFAULT_CONFIG;
-    this.show = DEFAULT_CONFIG.show;
-    this.bgBlur = DEFAULT_CONFIG.bgBlur;
-    this.bgColor = DEFAULT_CONFIG.bgColor;
-    this.bgOpacity = DEFAULT_CONFIG.bgOpacity;
-    this.bgLogoUrl = DEFAULT_CONFIG.bgLogoUrl;
-    this.bgLogoUrlPosition = DEFAULT_CONFIG.bgLogoUrlPosition;
-    this.bgLogoUrlSize = DEFAULT_CONFIG.bgLogoUrlSize;
-    this.spinnerType = DEFAULT_CONFIG.spinnerType;
-    this.spinnerSize = DEFAULT_CONFIG.spinnerSize;
-    this.spinnerColor = DEFAULT_CONFIG.spinnerColor;
-    this.spinnerPosition = DEFAULT_CONFIG.spinnerPosition;
-   }
+
+  constructor(private domSanitizer: DomSanitizer, private ngxLoadingXService: NgxLoadingXService) {
+    this.defaultConfig = this.ngxLoadingXService.getDefaultConfig();
+    this.show = this.defaultConfig.show;
+    this.bgBlur = this.defaultConfig.bgBlur;
+    this.bgColor = this.defaultConfig.bgColor;
+    this.bgOpacity = this.defaultConfig.bgOpacity;
+    this.bgLogoUrl = this.defaultConfig.bgLogoUrl;
+    this.bgLogoUrlPosition = this.defaultConfig.bgLogoUrlPosition;
+    this.bgLogoUrlSize = this.defaultConfig.bgLogoUrlSize;
+    this.spinnerType = this.defaultConfig.spinnerType;
+    this.spinnerSize = this.defaultConfig.spinnerSize;
+    this.spinnerColor = this.defaultConfig.spinnerColor;
+    this.spinnerPosition = this.defaultConfig.spinnerPosition;
+  }
 
 
 
