@@ -1,5 +1,4 @@
 import { Directive, Renderer2, ElementRef, Input, OnInit, OnChanges } from '@angular/core';
-import { DEFAULT_CONFIG } from 'projects/ngx-loading-x/src/lib/utils/NgxLoadingXConfig.constants';
 import { NgxLoadingXService } from 'projects/ngx-loading-x/src/lib/ngx-loading-x.service';
 import { NgxLoadingXConfig } from 'projects/ngx-loading-x/src/lib/utils/NgxLoadingXConfig.interface';
 
