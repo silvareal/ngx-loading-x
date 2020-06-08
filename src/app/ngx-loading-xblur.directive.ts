@@ -1,17 +1,23 @@
 import { Directive, Renderer2, ElementRef, Input, OnInit, OnChanges } from '@angular/core';
 import { DEFAULT_CONFIG } from 'projects/ngx-loading-x/src/lib/utils/NgxLoadingXConfig.constants';
+import { NgxLoadingXService } from 'projects/ngx-loading-x/src/lib/ngx-loading-x.service';
+import { NgxLoadingXConfig } from 'projects/ngx-loading-x/src/lib/utils/NgxLoadingXConfig.interface';
 
 @Directive({
   selector: '[NgxLoadingXBlur]'
 })
 
 export class NgxLoadingXBlurDirective implements OnChanges {
+  defaultConfig: NgxLoadingXConfig;
+  
   @Input() blur;
   @Input() show;
 
-  constructor(private renderer: Renderer2, private elementRef: ElementRef) {
-    this.blur = DEFAULT_CONFIG.bgBlur;
-    this.show = DEFAULT_CONFIG.show;
+  constructor(private renderer: Renderer2, private elementRef: ElementRef, private ngxLoadingXService: NgxLoadingXService) {
+    this.defaultConfig = this.ngxLoadingXService.getDefaultConfig();
+
+    this.blur = this.defaultConfig.bgBlur;
+    this.show = this.defaultConfig.show;
   }
 
   ngOnChanges() {
