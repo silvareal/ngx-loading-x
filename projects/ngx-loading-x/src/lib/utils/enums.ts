@@ -1,6 +1,11 @@
 
 // SPinner Types
 export enum SPINNER {
+    xWanderingCubes = 'x-wandering-cubes',
+    xBallSpin = 'x-ball-spin',
+    xChasingDots = 'x-chasing-dots',
+    xElapsis = 'x-elapsis',
+    circleSpinner = 'circle-spinner',
     threeStrings = 'three-strings',
     wanderingCubes = 'wandering-cubes'
 }

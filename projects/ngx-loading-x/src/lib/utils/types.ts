@@ -1,4 +1,9 @@
 export type SpinnerType =
+    | 'x-wandering-cubes'
+    | 'x-ball-spin'
+    | 'x-chasing-dots'
+    | 'x-elapsis'
+    | 'circle-spinner'
     | 'three-strings'
     | 'wandering-cubes';
 

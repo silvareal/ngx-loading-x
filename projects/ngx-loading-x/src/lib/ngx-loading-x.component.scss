@@ -1,4 +1,3 @@
-
 .ngx-overlay {
   position: fixed;
   top: 0;
@@ -96,6 +95,327 @@
 .bottom-right {
   bottom: 30px;
   right: 30px;
+}
+
+// Itility ends
+
+
+// Ball Spin
+.x-ball-spin,
+.x-ball-spin>div {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.x-ball-spin {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+
+.x-ball-spin>div {
+  display: inline-block;
+  float: none;
+  background-color: currentColor;
+  border: 0 solid currentColor;
+}
+
+.x-ball-spin>div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  height: 25%;
+  margin-top: -12.5%;
+  margin-left: -12.5%;
+  border-radius: 100%;
+  animation: ball-spin 1s infinite ease-in-out;
+}
+
+.x-ball-spin>div:nth-child(1) {
+  top: 5%;
+  left: 50%;
+  animation-delay: -1.125s;
+}
+
+.x-ball-spin>div:nth-child(2) {
+  top: 18.1801948466%;
+  left: 81.8198051534%;
+  animation-delay: -1.25s;
+}
+
+.x-ball-spin>div:nth-child(3) {
+  top: 50%;
+  left: 95%;
+  animation-delay: -1.375s;
+}
+
+.x-ball-spin>div:nth-child(4) {
+  top: 81.8198051534%;
+  left: 81.8198051534%;
+  animation-delay: -1.5s;
+}
+
+.x-ball-spin>div:nth-child(5) {
+  top: 94.9999999966%;
+  left: 50.0000000005%;
+  animation-delay: -1.625s;
+}
+
+.x-ball-spin>div:nth-child(6) {
+  top: 81.8198046966%;
+  left: 18.1801949248%;
+  animation-delay: -1.75s;
+}
+
+.x-ball-spin>div:nth-child(7) {
+  top: 49.9999750815%;
+  left: 5.0000051215%;
+  animation-delay: -1.875s;
+}
+
+.x-ball-spin>div:nth-child(8) {
+  top: 18.179464974%;
+  left: 18.1803700518%;
+  animation-delay: -2s;
+}
+
+@keyframes ball-spin {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+//End  x-ball-spin
+
+
+
+// x-chasng-dots
+.x-chasing-dots {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+
+  animation: x-chasingDots-rotate 2s infinite linear;
+}
+
+.x-chasing-dots>div {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: currentColor;
+  border-radius: 100%;
+
+  animation: x-chasingDots-bounce 2s infinite ease-in-out;
+}
+
+.x-chasing-dots>div:nth-child(2) {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes x-chasingDots-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes x-chasingDots-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+// x-chasing-dots 
+
+
+//x-elapsis
+.x-elapsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+
+  div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: currentColor;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+
+  div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+
+  div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+}
+
+// circle-spinner
+.circle-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+
+  div {
+    transform-origin: 40px 40px;
+    animation: circle-spinner 1.2s linear infinite;
+  }
+
+  div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: currentColor;
+  }
+
+  div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+
+  div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+
+  div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+
+  div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+
+  div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+
+  div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+
+  div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+
+  div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+
+  div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+
+  div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+
+  div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+
+  div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+
+  @keyframes circle-spinner {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
 }
 
 // sk-three-strings
@@ -208,3 +528,79 @@
     transform: rotate(-360deg);
   }
 }
+
+// x-wandering-cubes
+.x-wandering-cubes {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotateZ(45deg);
+}
+
+.x-wandering-cubes>div {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transform: scale(1.1);
+}
+
+.x-wandering-cubes>div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  animation: sk-foldingCube-angle 2.4s infinite linear both;
+  transform-origin: 100% 100%;
+}
+
+.x-wandering-cubes>div:nth-child(2) {
+  transform: scale(1.1) rotateZ(90deg);
+}
+
+.x-wandering-cubes>div:nth-child(3) {
+  transform: scale(1.1) rotateZ(270deg);
+}
+
+.x-wandering-cubes>div:nth-child(4) {
+  transform: scale(1.1) rotateZ(180deg);
+}
+
+.x-wandering-cubes>div:nth-child(2)::before {
+  animation-delay: 0.3s;
+}
+
+.x-wandering-cubes>div:nth-child(3)::before {
+  animation-delay: 0.9s;
+}
+
+.x-wandering-cubes>div:nth-child(4)::before {
+  animation-delay: 0.6s;
+}
+
+@keyframes sk-foldingCube-angle {
+
+  0%,
+  10% {
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+
+  25%,
+  75% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  90%,
+  100% {
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+// x-wandering-cubes
