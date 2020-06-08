@@ -1,19 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public load: boolean;
+  public load = false;
   title = 'ng-loading-library';
+  ngxLoadingXForm: FormGroup;
 
-  constructor() {}
+  constructor(private fb: FormBuilder,) {}
 
   ngOnInit() {
-    this.load = true;
+    this.ngxLoadingXForm = this.fb.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+    })
+  }
 
-    // setTimeout(() => this.load = false, 5000 )
+  loginForm() {
+    this.load = true;
+    setTimeout(() => this.load = false, 5000 )
   }
 }
