@@ -1,6 +1,6 @@
-import { Directive, Renderer2, ElementRef, Input, OnInit, OnChanges } from '@angular/core';
-import { NgxLoadingXService } from 'projects/ngx-loading-x/src/lib/ngx-loading-x.service';
-import { NgxLoadingXConfig } from 'projects/ngx-loading-x/src/lib/utils/NgxLoadingXConfig.interface';
+import { Directive, Renderer2, ElementRef, Input, OnChanges } from '@angular/core';
+import { NgxLoadingXService } from './ngx-loading-x.service';
+import { NgxLoadingXConfig } from '../public-api';
 
 @Directive({
   selector: '[NgxLoadingXBlur]'

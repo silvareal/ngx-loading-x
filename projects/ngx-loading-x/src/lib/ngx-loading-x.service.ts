@@ -1,7 +1,7 @@
-import { DEFAULT_CONFIG } from 'projects/ngx-loading-x/src/lib/utils/NgxLoadingXConfig.constants';
 import { Injectable, Optional, Inject } from '@angular/core';
 import { NGX_LOADING_X_TOKEN } from './ngx-loading-x-config.token';
 import { NgxLoadingXConfig } from './utils/NgxLoadingXConfig.interface';
+import { DEFAULT_CONFIG } from './utils/NgxLoadingXConfig.constants';
 
 @Injectable({
   providedIn: 'root'

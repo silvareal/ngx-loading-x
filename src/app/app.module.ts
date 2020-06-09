@@ -1,11 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {  ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { NgxLoadingXModule } from 'projects/ngx-loading-x/src/lib/ngx-loading-x.module';
-import { NgxLoadingXBlurDirective } from './ngx-loading-xblur.directive';
-import { POSITION, SPINNER } from 'projects/ngx-loading-x/src/lib/utils/enums';
-import { NgxLoadingXConfig } from 'projects/ngx-loading-x/src/lib/utils/NgxLoadingXConfig.interface';
+import { NgxLoadingXConfig, POSITION, SPINNER, NgxLoadingXModule } from 'ngx-loading-x';
 
 
 const ngxLoadingXConfig: NgxLoadingXConfig = {
@@ -24,11 +21,11 @@ const ngxLoadingXConfig: NgxLoadingXConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    NgxLoadingXBlurDirective
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     NgxLoadingXModule.forRoot(ngxLoadingXConfig)
   ],
   providers: [],
