@@ -9,6 +9,7 @@ import { NgxLoadingXConfig } from '../public-api';
 export class NgxLoadingXBlurDirective implements OnChanges {
   defaultConfig: NgxLoadingXConfig;
   
+  
   @Input() blur;
   @Input() show;
 
