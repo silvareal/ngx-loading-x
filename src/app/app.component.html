@@ -5,7 +5,7 @@
     <div *ngIf="register" class="alert alert-success" role="alert">
       Dummy account sccessfully created 😀
     </div>
-    <form class="mt-4" [formGroup]="ngxLoadingXForm" (ngSubmit)="loginForm()">
+    <form class="mt-4" [formGroup]="ngxLoadingXForm" (ngSubmit)="loginForm()" autocomplete="off">
 
       <div class="form-group">
         <label for="id">Email</label>
@@ -21,7 +21,7 @@
 
       <div class="form-group">
         <label for="password">password</label>
-        <input type="text" id="password" formControlName="password" class="form-control" placeholder="90192930"
+        <input type="" id="password" formControlName="password" class="form-control" placeholder="90192930"
           aria-describedby="password" [ngClass]="{'is-invalid': (ngxLoadingXForm.get('password').touched ||
           ngxLoadingXForm.get('password').dirty) && !ngxLoadingXForm.get('password').valid}">
       </div>

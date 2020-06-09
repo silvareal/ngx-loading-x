@@ -10,7 +10,7 @@ const ngxLoadingXConfig: NgxLoadingXConfig = {
   bgBlur: 2,
   bgColor: 'rgba(40, 40, 40, 0.5)',
   bgOpacity: 5,
-  bgLogoUrl: './assets/img/logo.png',
+  bgLogoUrl: '',
   bgLogoUrlPosition: POSITION.topLeft,
   bgLogoUrlSize: 100,
   spinnerType: SPINNER.wanderingCubes,
