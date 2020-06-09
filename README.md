@@ -2,7 +2,7 @@
 ![](src/assets/demo/ngx-loading-x-demo.gif)
 
 # Demo
-Check out the interactive live [demo](https://ngx-loading-x.stackblitz.io)
+Check out the interactive live [demo](https://stackblitz.com/edit/ngx-loading-x)
 
 # Getting Started
 
