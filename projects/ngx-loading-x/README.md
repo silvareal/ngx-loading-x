@@ -1,7 +1,7 @@
 # Ngx Loading X
 
 
-![](assets/demo/ngx-loading-x-demo.gif)
+![](https://github.com/silvareal/ngx-loading-x/blob/master/src/assets/demo/ngx-loading-x-demo.gif)
 
 # Demo
 Check out the interactive live [demo](https://ngx-loading-x.stackblitz.io)
