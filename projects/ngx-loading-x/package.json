@@ -1,9 +1,39 @@
 {
   "name": "ngx-loading-x",
-  "version": "0.0.1",
+  "description": "Multiple Loaders / spinners in angular with an optional blurry overlay",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silvareal/ngx-loading-x"
+  },
+  "author": "sylvernus akubo",
+  "homepage": "https://github.com/silvareal/ngx-loading-x#readme",
+  "license": "MIT",
+  "private": false,
   "peerDependencies": {
-    "@angular/common": "^9.0.7",
-    "@angular/core": "^9.0.7",
-    "tslib": "^1.10.0"
-  }
+    "@angular/common": ">=9.0.0",
+    "@angular/core": ">=9.0.0",
+    "@angular/platform-browser": ">=9.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/silvareal/ngx-loading-x/issues"
+  },
+  "keywords": [
+    "ngx-loading-x",
+    "ngx-loader",
+    "ngx-loading",
+    "ngx-multiple-loader",
+    "ngx-multiloader",
+    "loader",
+    "loading",
+    "spinner",
+    "ngx-spinner",
+    "progressbar",
+    "progress bar",
+    "loader AoT compatible",
+    "Angular loader",
+    "Angular loading",
+    "Angular multiple loaders",
+    "Angular spinner"
+  ]
 }
