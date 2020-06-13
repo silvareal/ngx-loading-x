@@ -1,3 +1,4 @@
+[![GitHub issues](https://img.shields.io/github/issues/silvareal/ngx-loading-x)](https://github.com/silvareal/ngx-loading-x/issues)  ![npm](https://img.shields.io/npm/dw/ngx-loading-x) ![NPM](https://img.shields.io/npm/l/ngx-loading-x)
 # Ngx Loading X
 
 
@@ -86,7 +87,7 @@ Include `ngx-loading-x` component selector to your app component templates, Set 
 # `NgxLoadingXBlur` Directive
 If you want your page content is blurred/frosted while showing the loading background overlay.
 ```html
-<div NgxLoadingXBlur blur="5">
+<div NgxLoadingXBlur [show]="load">
   <!-- This page content will be blurred/frosted when loading background overlay is showed -->
 </div>
 <ngx-loading-x [show]="load"></ngx-loading-x>
