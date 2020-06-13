@@ -35,5 +35,8 @@
     "Angular loading",
     "Angular multiple loaders",
     "Angular spinner"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
