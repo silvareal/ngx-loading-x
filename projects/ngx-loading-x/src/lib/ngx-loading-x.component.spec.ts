@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NgxLoadingXComponent } from './ngx-loading-x.component';
 
@@ -6,7 +6,7 @@ describe('NgxLoadingXComponent', () => {
   let component: NgxLoadingXComponent;
   let fixture: ComponentFixture<NgxLoadingXComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ NgxLoadingXComponent ]
     })
