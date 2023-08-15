@@ -1,7 +1,7 @@
 {
   "name": "ngx-loading-x",
   "description": "Multiple Loaders / spinners in angular with an optional blurry overlay",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "repository": {
     "type": "git",

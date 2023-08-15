@@ -8,10 +8,17 @@ Check out the interactive live [demo](https://stackblitz.com/edit/ngx-loading-x)
 # Getting Started
 
 ## Installation
-Install `ngx-loading-x` from **NPM** using this command
+Install `ngx-loading-x` version 1 from **NPM** using this command
 ```shell
-npm install ngx-loading-x --save
+npm install ngx-loading-x@1.0.3 --save
 ```
+
+## For Angular v16
+Install `ngx-loading-x` version 2 from **NPM** using this command
+```shell
+npm install ngx-loading-x@2.0.0 --save
+```
+> Thanks to [TaylorHo](https://github.com/taylorho/)
 
 
 ## Usage
