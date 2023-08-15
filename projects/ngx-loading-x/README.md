@@ -1,8 +1,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/silvareal/ngx-loading-x)](https://github.com/silvareal/ngx-loading-x/issues)  ![npm](https://img.shields.io/npm/dw/ngx-loading-x) ![NPM](https://img.shields.io/npm/l/ngx-loading-x)
 # Ngx Loading X
-
-
-![](https://raw.githubusercontent.com/silvareal/ngx-loading-x/master/src/assets/demo/ngx-loading-x-demo.gif?token=AGLSGL6YBT43IEXFEAIJSEC65FRB4)
+![](src/assets/demo/ngx-loading-x-demo.gif)
 
 # Demo
 Check out the interactive live [demo](https://stackblitz.com/edit/ngx-loading-x)
@@ -10,10 +8,17 @@ Check out the interactive live [demo](https://stackblitz.com/edit/ngx-loading-x)
 # Getting Started
 
 ## Installation
-Install `ngx-loading-x` from **NPM** using this command
+Install `ngx-loading-x` version 1 from **NPM** using this command
 ```shell
-npm install ngx-loading-x --save
+npm install ngx-loading-x@1.0.3 --save
 ```
+
+## For Angular v16
+Install `ngx-loading-x` version 2 from **NPM** using this command
+```shell
+npm install ngx-loading-x@2.0.0 --save
+```
+> Thanks to [TaylorHo](https://github.com/taylorho/)
 
 
 ## Usage
